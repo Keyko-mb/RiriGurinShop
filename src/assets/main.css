@@ -1,0 +1,45 @@
+@import '../../../../../platform/src/assets/base.css';
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --font-size: 1rem;
+    --main-font-family: Mouse Memoirs, sans-serif;
+    --body-font-family: Oswald, sans-serif;
+    --primary-color: #e259ff;
+    /*--tertiary-color: #d6d1f0;*/
+    /*--form-color: #FFF;*/
+    /*--text-color: #001021;*/
+    /*--error-color: #ff9999;*/
+    /*--truth-color: #a8ffab;*/
+    /*--warning-color: #ffda99;*/
+    /*--background-color: #f8f7fd;*/
+    /*--logo-color: #ff8b90;*/
+    /*--table-color: #d6d1f0;*/
+    /*--hyperlink-color: #0000FF;*/
+  }
+
+  body {
+    font-size: var(--font-size);
+    font-family: var(--body-font-family);
+    font-weight: lighter;
+    /*background-color: var(--background-color);*/
+    /*color: var(--text-color);*/
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .link {
+    @apply text-white hover:text-primary transition-all
+  }
+}
