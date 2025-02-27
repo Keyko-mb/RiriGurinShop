@@ -1,35 +1,59 @@
 <template>
-  <div class="h-full">
-    <img src="/moon.png" class="absolute w-3/5 top-0 left-1/3 object-cover">
+  <div class="h-full relative overflow-hidden">
+    <img src="/moon.png" class="absolute w-[80rem] top-0 left-[36rem] object-cover z-0" alt="moon">
 
-    <video autoplay loop muted playsinline class="absolute object-cover w-11/12 -bottom-8 left-[17rem] z-20">
+    <!-- Фон панели -->
+    <div class="bg-black bg-opacity-50 w-1/4 h-full absolute top-0 left-0 z-10 animate-fade-in"></div>
+
+    <!-- Видео -->
+    <video autoplay loop muted playsinline class="absolute object-cover w-11/12 -bottom-8 left-[17rem] z-20 animate-fade-in">
       <source src="/art_background.webm" type="video/webm">
     </video>
 
-    <div class="bg-black bg-opacity-50 w-1/4 h-full flex flex-col justify-between px-5">
-      <div class="flex flex-col items-center gap-10">
-        <img src="/logo.png" class="mt-32">
+    <!-- Содержимое панели -->
+    <div class="w-1/4 h-full flex flex-col justify-between px-5 absolute top-0 left-0 z-30 animate-fade-in">
+      <div class="flex flex-col items-center space-y-5">
+        <img src="/logo.png" class="w-[440px] mt-12" alt="logo">
 
-        <div class="flex items-center space-x-2">
-          <a href="https://x.com/Riri_Gurin" target="_blank" class="hover:opacity-75">
-            <img src="/x.svg" alt="X" class="w-8 h-8" />
+        <div class="flex items-center space-x-1">
+          <a href="https://x.com/Riri_Gurin" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/X.svg" alt="X" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/X white.svg" alt="X-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
           </a>
-          <a href="https://boosty.to/ririgurin" target="_blank" class="hover:opacity-75">
-            <img src="/boosty.svg" alt="Boosty" class="w-8 h-8 bg-black rounded-md" />
+          <a href="https://www.instagram.com/ririgurin/" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/Inst.svg" alt="Instagram" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/Inst white.svg" alt="Instagram-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
           </a>
-          <a href="https://www.instagram.com/riri_gurin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:opacity-75">
-            <img src="/instagram.svg" alt="Instagram" class="w-9 h-9" />
+          <a href="https://bsky.app/profile/ririgurin.bsky.social" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/blsky.svg" alt="blsky" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/blsky white.svg" alt="blsky-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
           </a>
-          <a href="https://trello.com/b/JYYgt4Qv/order-board" target="_blank" class="hover:opacity-75">
-            <img src="/trello.svg" alt="Trello" class="w-8 h-8" />
+          <a href="https://vk.com/riri_gurin" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/Vk.svg" alt="Vk" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/Vk white.svg" alt="Vk-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
+          </a>
+          <a href="https://www.tiktok.com/@riri_gurin" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/tiktok.svg" alt="tiktok" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/tiktok white.svg" alt="tiktok-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
+          </a>
+          <a href="https://www.patreon.com/ririgurin" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/patreon.svg" alt="patreon" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/patreon white.svg" alt="patreon-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
+          </a>
+          <a href="https://www.twitch.tv/ririgurin" target="_blank" class="relative w-11 h-11 z-40">
+            <img src="/Twitch.svg" alt="twitch" class="absolute w-full h-full transition-opacity opacity-100 hover:opacity-0">
+            <img src="/Twitch white.svg" alt="twitch-hover" class="absolute w-full h-full transition-opacity opacity-0 hover:opacity-100">
           </a>
         </div>
-        <div class="w-full flex flex-col gap-8 px-10">
-          <button class="text-2xl relative inline-flex items-center justify-center pb-1 text-primary bg-transparent border-none rounded-xl neon-glow-primary">
-            contact me
+
+        <div class="flex flex-col gap-1">
+          <button class="relative h-[80px] overflow-hidden z-40">
+            <img src="/contact me.svg" class="w-full h-full transition-opacity opacity-100 hover:opacity-0" alt="contact me">
+            <img src="/contact me white.svg" class="absolute inset-0 w-full h-full transition-opacity opacity-0 hover:opacity-100" alt="contact me-hover">
           </button>
-          <button class="text-2xl relative inline-flex items-center justify-center pb-1 text-primary bg-transparent border-none rounded-xl neon-glow-primary">
-            tip support
+          <button class="relative h-[80px] overflow-hidden z-40">
+            <img src="/tip support.svg" class="w-full h-full transition-opacity opacity-100 hover:opacity-0" alt="tip support">
+            <img src="/tip support white.svg" class="absolute inset-0 w-full h-full transition-opacity opacity-0 hover:opacity-100" alt="tip support-hover">
           </button>
         </div>
       </div>
@@ -41,12 +65,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.neon-glow-primary {
-  @apply shadow-[0_0_10px_#e259ff,0_0_10px_#e259ff,0_0_20px_#e259ff] hover:shadow-[0_0_20px_#e259ff,0_0_20px_#e259ff,0_0_30px_#e259ff] transition-shadow duration-300;
-}
-.neon-glow-primary::before {
-  @apply content-[''] absolute -inset-1 rounded-2xl bg-transparent border-none shadow-[0_0_5px_#e259ff,0_0_5px_#e259ff] opacity-80;
-}
-</style>
