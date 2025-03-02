@@ -1,20 +1,20 @@
 <template>
   <header class="bg-black z-30">
     <div class="container mx-auto pt-1 pb-2">
-      <nav class="flex gap-28 justify-center">
-        <RouterLink class="link text-2xl wing-link" active-class="active" to="/">
+      <nav class="flex gap-9 lg:gap-28 justify-center">
+        <RouterLink class="link lg:text-2xl wing-link" to="/">
           <p>home</p>
         </RouterLink>
-        <RouterLink class="link text-2xl wing-link" active-class="active" to="/about">
+        <RouterLink class="link lg:text-2xl wing-link" to="/about">
           <p>about</p>
         </RouterLink>
-        <RouterLink class="link text-2xl wing-link" active-class="active" to="/commission">
+        <RouterLink class="link lg:text-2xl wing-link" to="/commission">
           <p>commission</p>
         </RouterLink>
-        <RouterLink class="link text-2xl wing-link" active-class="active" to="/shop">
+        <RouterLink class="link lg:text-2xl wing-link" to="/shop">
           <p>shop</p>
         </RouterLink>
-        <RouterLink class="link text-2xl wing-link" active-class="active" to="/tos">
+        <RouterLink class="link lg:text-2xl wing-link" to="/tos">
           <p>t.o.s</p>
         </RouterLink>
       </nav>
@@ -23,6 +23,13 @@
 </template>
 
 <style scoped>
+@media (max-width: 1023px) {
+  .wing-link::before,
+  .wing-link::after {
+    display: none;
+  }
+}
+
 .wing-link {
   position: relative;
   display: inline-block;

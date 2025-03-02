@@ -8,12 +8,12 @@ import router from './router'
 const app = createApp(App)
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCywYnyg_VGgXraFLNl-_KL0_c_mGW1ZjI",
-  authDomain: "sample-firebase-ai-app-12744.firebaseapp.com",
-  projectId: "sample-firebase-ai-app-12744",
-  storageBucket: "sample-firebase-ai-app-12744.firebasestorage.app",
-  messagingSenderId: "847143114704",
-  appId: "1:847143114704:web:da49ae4e298365925c8bd5"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 initializeApp(firebaseConfig);
